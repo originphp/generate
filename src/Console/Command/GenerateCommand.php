@@ -14,10 +14,10 @@ declare(strict_types = 1);
  */
 namespace Generate\Console\Command;
 
-use Origin\Inflector\Inflector;
-use Origin\Model\ConnectionManager;
-use Origin\Console\Command\Command;
 use Origin\Core\Config;
+use Origin\Inflector\Inflector;
+use Origin\Console\Command\Command;
+use Origin\Model\ConnectionManager;
 
 class GenerateCommand extends Command
 {
@@ -66,7 +66,7 @@ class GenerateCommand extends Command
         /**
          * in standalone plugin this directories are the same
          */
-        $this->directory  = dirname(__DIR__, 3) . '/templates';
+        $this->directory = dirname(__DIR__, 3) . '/templates';
         if (file_exists(ROOT .'/templates')) {
             $this->directory = ROOT . '/templates';
         }

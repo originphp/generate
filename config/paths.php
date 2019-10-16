@@ -2,7 +2,7 @@
 /**
  * Path configuration constants
  */
-if (!defined('DS')) {
+if (! defined('DS')) {
     define('DS', DIRECTORY_SEPARATOR);
 }
 define('ROOT', dirname(__DIR__));
