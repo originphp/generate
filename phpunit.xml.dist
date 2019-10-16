@@ -14,10 +14,13 @@
     <php>
         <const name="PHPUNIT" value="true"/>
         <env name="ORIGIN_ENV" value="test"/>
-        <env name="DB_USERNAME" value="root" />
-        <env name="DB_PASSWORD" value="root" />
-        <env name="DB_HOST" value="localhost" />
-        <env name="DB_ENGINE" value="mysql" />
+        
+         <!-- # Database Settings mysql/pgsql
+            <env name="DB_HOST" value="localhost" />
+            <env name="DB_USERNAME" value="root" />
+            <env name="DB_PASSWORD" value="root" />
+            <env name="DB_ENGINE" value="mysql" />
+        -->
     </php>
     <listeners>
         <listener
