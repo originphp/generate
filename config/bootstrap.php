@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * This is the bootstrap for plugin when using as standalone (for development). Do not
+ * use this bootstrap as a plugin. .gitattributes has blocked this from being installed.
+ */
 use Origin\Core\Config;
 
 require __DIR__ . '/paths.php';
