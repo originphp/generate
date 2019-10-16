@@ -21,8 +21,8 @@ script:
 after_script:
   - wget https://github.com/php-coveralls/php-coveralls/releases/download/v2.1.0/php-coveralls.phar
   - php php-coveralls.phar --verbose
-#cache:
-#  directories:
-#    - $HOME/.composer/cache/files
+cache:
+  directories:
+    - $HOME/.composer/cache/files
 after_success:
   - bash <(curl -s https://codecov.io/bash)
