@@ -32,7 +32,7 @@ class GenerateCommand extends Command
      *
      * @var string
      */
-    protected $directory = ROOT . '/templates';
+    protected $directory = null;
 
     /**
      * Generators array and list of templates they will process.
@@ -63,8 +63,12 @@ class GenerateCommand extends Command
 
     public function initialize() : void
     {
-        if (! file_exists($this->directory)) {
-            $this->directory = ORIGIN . DS . 'templates'; // default
+        /**
+         * in standalone plugin this directories are the same
+         */
+        $this->directory  = dirname(__DIR__, 3) . '/templates';
+        if (file_exists(ROOT .'/templates')) {
+            $this->directory = ROOT . '/templates';
         }
 
         $this->addArgument(
