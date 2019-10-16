@@ -7,7 +7,7 @@ dist: xenial
 env:
   matrix:
     - DB_ENGINE=mysql DB_HOST=localhost DB_USERNAME=root
-    - DB_ENGINE=pgsql DB_HOST=localhost DB_USERNAME=root
+    - DB_ENGINE=pgsql DB_HOST=localhost DB_USERNAME=postgres
 services:
   - mysql
   - postgresql
