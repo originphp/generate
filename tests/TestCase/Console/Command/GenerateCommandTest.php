@@ -122,6 +122,25 @@ class GenerateCommandTest extends OriginTestCase
         unlink($filename);
     }
 
+    public function testGenerateEntity()
+    {
+        $this->exec('generate --force entity Dummy');
+        $this->assertExitSuccess();
+
+        $filename = APP.DS.'Model'.DS.'Entity'.DS.'Dummy.php';
+        $this->assertOutputContains('src/Model/Entity/Dummy.php');
+        $this->assertFileExists($filename);
+     
+        $this->assertFileHash('04fad3b577c8f9f19bea579100c6392d', $filename);
+        unlink($filename);
+
+        $filename = TESTS.DS.'TestCase'.DS.'Model'.DS.'Entity'.DS.'DummyTest.php';
+        $this->assertOutputContains('TestCase/Model/Entity/DummyTest.php');
+        $this->assertFileExists($filename);
+        $this->assertFileHash('8e207b0ecf03008a057ace54122cfe79', $filename);
+        unlink($filename);
+    }
+
     public function testGenerateConcernController()
     {
         $this->exec('generate --force concern_controller Dummy');
