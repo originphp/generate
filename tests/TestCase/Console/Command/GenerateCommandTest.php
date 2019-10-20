@@ -345,7 +345,7 @@ class GenerateCommandTest extends OriginTestCase
         $this->assertOutputContains('TestCase/Mailer/DummyMailerTest.php');
         $this->assertFileExists($filename);
         
-        $this->assertFileHash('3c59f7f5ca9b3be50a8d3b38e17f9be4', $filename);
+        $this->assertFileHash('cf01cd19698931d7b0c23b682bdd162e', $filename);
         unlink($filename);
 
         $filename = APP.DS.'Mailer'.DS.'Template'.DS .'dummy.html.ctp';
@@ -505,7 +505,7 @@ class GenerateCommandTest extends OriginTestCase
 
         $filename = PLUGINS.DS.'dummy'.DS.'composer.json';
         $this->assertFileExists($filename);
-        $this->assertFileHash('3aac15995b02c9505537ccdb85130f31', $filename);
+        $this->assertFileHash('16bab5bd917ae19aa28358a6147c9475', $filename);
 
         $this->recursiveDelete(PLUGINS.DS.'dummy');
     }
