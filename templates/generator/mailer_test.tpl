@@ -17,8 +17,8 @@ class %class%MailerTest extends OriginTestCase
     {
         $user = $this->User->find('first', ['conditions' => ['id' => 1000]]);
         $message = (new %class%Mailer())->dispatch($user);
-        $this->assertContains('To: user@example.com',$message->header());
-        $this->assertContains('From: user@example.com',$message->header());
-        $this->assertContains('Hello user',$message->body());
+        $this->assertStringContainsString('To: user@example.com',$message->header());
+        $this->assertStringContainsString('From: user@example.com',$message->header());
+        $this->assertStringContainsString('Hello user',$message->body());
     }
 }
