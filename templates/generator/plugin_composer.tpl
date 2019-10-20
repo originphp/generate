@@ -16,8 +16,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "%namespace%\\Test\\": "tests/",
-            "Origin\\Test\\": "vendor/originphp/framework/tests/"
+            "%namespace%\\Test\\": "tests/"
         }
     }
 }
