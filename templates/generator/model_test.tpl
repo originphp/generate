@@ -4,7 +4,7 @@ namespace %namespace%\Test\Model;
 use Origin\TestSuite\OriginTestCase;
 
 /**
- * @property \App\Model\%class% $%class%
+ * @property \%namespace%\Model\%class% $%class%
  */
 class %class%Test extends OriginTestCase
 {

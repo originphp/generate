@@ -4,7 +4,7 @@ namespace %namespace%\Test\Http\Middleware;
 use Origin\TestSuite\OriginTestCase;
 use Origin\Http\Request;
 use Origin\Http\Response;
-use %namespace%\Middleware\%class%Middleware;
+use %namespace%\Http\Middleware\%class%Middleware;
 
 class %class%MiddlewareTest extends OriginTestCase
 {
