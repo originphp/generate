@@ -156,7 +156,7 @@ class GenerateCommandTest extends OriginTestCase
         $filename = TESTS.DS.'TestCase'.DS.'Http'.DS.'Controller'.DS.'Concern'.DS.'DummyTest.php';
         $this->assertOutputContains('TestCase/Http/Controller/Concern/DummyTest.php');
         $this->assertFileExists($filename);
-        $this->assertFileHash('5245051fbd109926d5ea27ff2995eb35', $filename);
+        $this->assertFileHash('ea2963939952af4e4692926f1b658cec', $filename);
         unlink($filename);
     }
 
@@ -373,7 +373,7 @@ class GenerateCommandTest extends OriginTestCase
         $filename = TESTS.DS.'TestCase'.DS.'Model'.DS.'DummyTest.php';
         $this->assertOutputContains('tests/TestCase/Model/DummyTest.php');
         $this->assertFileExists($filename);
-        $this->assertFileHash('65d447d47d3ece7e2823d07bc7365eb9', $filename);
+        $this->assertFileHash('b26905f284cff1f05aec9d57e82d0cb1', $filename);
    
         unlink($filename);
 
@@ -407,7 +407,7 @@ class GenerateCommandTest extends OriginTestCase
         $filename = TESTS.DS.'TestCase'.DS .'Http'.DS . 'Middleware'.DS.'DummyMiddlewareTest.php';
         $this->assertOutputContains('TestCase/Http/Middleware/DummyMiddlewareTest.php');
         $this->assertFileExists($filename);
-        $this->assertFileHash('7f727124d4b544fd41ba510721bd03c9', $filename);
+        $this->assertFileHash('b87fd9858756d3f1eed6991329d61fc3', $filename);
         unlink($filename);
     }
 
