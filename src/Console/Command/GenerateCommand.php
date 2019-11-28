@@ -431,7 +431,7 @@ class GenerateCommand extends Command
     {
         $data += ['code' => ''];
 
-        $version = date('Ymdhis');
+        $version = date('YmdHis');
         $this->generate(
             $this->getTemplateFilename('migration'),
             DATABASE . DS . 'migrations' . DS . "{$version}{$data['class']}.php",
