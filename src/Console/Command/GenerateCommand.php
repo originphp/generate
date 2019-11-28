@@ -50,6 +50,7 @@ class GenerateCommand extends Command
         'helper' => 'Generates a Helper class',
         'job' => 'Generates a Job class',
         'listener' => 'Generates a Listener class',
+        'mailbox' => 'Generates a Mailbox class',
         'mailer' => 'Generates a Mailer class',
         'model' => 'Generates a Model class',
         'middleware' => 'Generates a Middleware class',
@@ -310,6 +311,22 @@ class GenerateCommand extends Command
             $data
         );
     }
+
+    protected function mailbox(array $data)
+    {
+        $this->generate(
+            $this->getTemplateFilename('mailbox'),
+            $this->getBaseFolder($data['name'], self::SRC).DS.'Mailbox'.DS."{$data['class']}Mailbox.php",
+            $data
+        );
+
+        $this->generate(
+            $this->getTemplateFilename('mailbox_test'),
+            $this->getBaseFolder($data['name'], self::TEST).DS.'Mailbox'.DS."{$data['class']}MailboxTest.php",
+            $data
+        );
+    }
+
     protected function mailer(array $data)
     {
         $this->generate(

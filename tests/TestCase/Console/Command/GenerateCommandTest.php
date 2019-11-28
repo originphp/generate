@@ -103,6 +103,25 @@ class GenerateCommandTest extends OriginTestCase
         $this->assertExitError();
         $this->assertErrorContains('Invalid format for foo, should be name:type');
     }
+
+    public function testGenerateMailbox()
+    {
+        $this->exec('generate --force mailbox Dummy');
+        $this->assertExitSuccess();
+        $filename = APP.DS.'Mailbox'.DS.'DummyMailbox.php';
+        $this->assertOutputContains('src/Mailbox/DummyMailbox.php');
+        $this->assertFileExists($filename);
+    
+        $this->assertFileHash('6cdc21e8146c6911072cb8d2b22758b1', $filename);
+        unlink($filename);
+        
+        $filename = TESTS.DS.'TestCase'.DS .'Mailbox'.DS.'DummyMailboxTest.php';
+        $this->assertOutputContains('TestCase/Mailbox/DummyMailboxTest.php');
+        $this->assertFileExists($filename);
+        $this->assertFileHash('f67f008e423dbb3c7afe2ed6449cc246', $filename);
+        unlink($filename);
+    }
+
     public function testGenerateConcernModel()
     {
         $this->exec('generate --force concern_model Dummy');
