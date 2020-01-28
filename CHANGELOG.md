@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed 
 - Fixed scaffolding templates not echoing variable
 
+### Changed
+- Changed travis.yml - Changed PHP 7.4 version and removed Removed Codecov.io
+
 ## [1.1.0] - 2019-11-28
 ### Fixed
 - Fixed Migration version numbering to use 24 hour time
