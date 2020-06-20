@@ -1,10 +1,8 @@
 <?php
 namespace App\Http\Controller;
+
 /**
  * @property \App\Model\%model% $%model%
- * @property \Origin\Http\Controller\Component\SessionComponent $Session
- * @property \Origin\Http\Controller\Component\CookieComponent $Cookie
- * @property \Origin\Http\Controller\Component\AuthComponent $Auth
  */
 class %controller%Controller extends ApplicationController
 {
