@@ -60,7 +60,7 @@ class GenerateCommandTest extends OriginTestCase
         $this->assertFileHash('940945582b2e06f804ce18c64e12dbfa', APP . DS . 'Model' . DS . 'Bookmark.php');
         unlink(APP . DS . 'Model' . DS . 'Bookmark.php');
 
-        $this->assertFileHash('ae4389221897c48b12d35b3755969059', APP . DS . 'Http' . DS . 'Controller' . DS . 'BookmarksController.php');
+        $this->assertFileHash('a4ecff363c8f2847c217cc60f7c58248', APP . DS . 'Http' . DS . 'Controller' . DS . 'BookmarksController.php');
         unlink(APP . DS . 'Http' . DS .  'Controller' . DS . 'BookmarksController.php');
 
         $this->assertFileHash('c380851603180c386f809d2140305f09', APP . DS . 'Http' . DS . 'View' . DS . 'Bookmarks' . DS . 'add.ctp');
