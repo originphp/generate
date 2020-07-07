@@ -4,10 +4,13 @@
  * This is the bootstrap for plugin when using as standalone (for development). Do not
  * use this bootstrap as a plugin. .gitattributes has blocked this from being installed.
  */
+
+use Origin\Cache\Cache;
+use Origin\Cache\Engine\FileEngine;
 use Origin\Core\Config;
 
 require __DIR__ . '/paths.php';
-require ORIGIN . '/src/bootstrap.php';
+require dirname(__DIR__) . '/vendor/originphp/Core/bootstrap.php';
 
 Config::write('App.namespace', 'Generate');
 
@@ -19,4 +22,12 @@ ConnectionManager::config('test', [
     'username' => env('DB_USERNAME'),
     'password' => env('DB_PASSWORD'),
     'engine' => env('DB_ENGINE', 'mysql')
+]);
+
+Cache::config('origin', [
+    'className' => FileEngine::class,
+    'path' => CACHE . '/origin',
+    'duration' => '+2 minutes',
+    'prefix' => 'cache_',
+    'serialize' => true
 ]);
