@@ -335,7 +335,7 @@ class GenerateCommandTest extends OriginTestCase
         $filename = APP . DS . 'Http' . DS . 'View' . DS . 'Helper' . DS . 'DummyHelper.php';
         $this->assertOutputContains('src/Http/View/Helper/DummyHelper.php');
         $this->assertFileExists($filename);
-        $this->assertFileHash('0e14d3a77be9c244bc02c2c1a823a69c', $filename);
+        $this->assertFileHash('b2a9c09859bc2d68b1022e61430d4422', $filename);
         unlink($filename);
 
         $filename = TESTS . DS . 'TestCase' . DS . 'Http' . DS . 'View' . DS . 'Helper' . DS . 'DummyHelperTest.php';
