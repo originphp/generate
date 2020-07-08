@@ -30,6 +30,7 @@ $ bin/console generate
   helper               Generates a Helper class
   job                  Generates a Job class
   listener             Generates a Listener class
+  mailbox              Generates a Mailbox class
   mailer               Generates a Mailer class
   model                Generates a Model class
   middleware           Generates a Middleware class
