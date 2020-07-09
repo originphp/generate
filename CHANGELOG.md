@@ -5,6 +5,7 @@
 ### Fixed
 
 - Fixed bootstrap path 
+- Fixed incorrect db driver in travis settings
 
 ## [3.0.0] - 2020-07-08
 

@@ -6,13 +6,13 @@ dist: xenial
 env:
   matrix:
     - DB_ENGINE=mysql DB_HOST=localhost DB_USERNAME=root
-    - DB_ENGINE=pgsql DB_HOST=localhost DB_USERNAME=postgres
+    - DB_ENGINE=postgres DB_HOST=localhost DB_USERNAME=postgres
 services:
   - mysql
   - postgresql
 before_install:
   - if [ $DB_ENGINE = 'mysql' ]; then mysql -u root -e 'CREATE DATABASE generate;'; fi
-  - if [ $DB_ENGINE = 'pgsql' ]; then psql -c 'CREATE DATABASE generate;' -U postgres; fi
+  - if [ $DB_ENGINE = 'postgres' ]; then psql -c 'CREATE DATABASE generate;' -U postgres; fi
 before_script:
   - composer install --prefer-source --no-interaction
 script:
