@@ -1,6 +1,12 @@
 # Changelog
 
-## [3.0] - 2020-07-08
+## [3.0.1] - 2020-07-09
+
+### Fixed
+
+- Fixed bootstrap path 
+
+## [3.0.0] - 2020-07-08
 
 ### Changed
 
@@ -8,7 +14,7 @@
 - Changed PHP minimum version 7.3
 - Changed PHPUnit minimum version 9.2
 
-## [2.0] - 2020-07-01
+## [2.0.0] - 2020-07-01
 
 - skipping this version to bring in line with framework version number
 

@@ -10,7 +10,7 @@ use Origin\Cache\Engine\FileEngine;
 use Origin\Core\Config;
 
 require __DIR__ . '/paths.php';
-require dirname(__DIR__) . '/vendor/originphp/Core/bootstrap.php';
+require dirname(__DIR__) . '/vendor/originphp/core/bootstrap.php';
 
 Config::write('App.namespace', 'Generate');
 
