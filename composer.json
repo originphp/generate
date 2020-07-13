@@ -30,8 +30,7 @@
         "originphp/plugin-installer": "^1.3"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.2",
-        "originphp/test-suite": "^3"
+        "phpunit/phpunit": "^9.2"
     },
     "minimum-stability": "dev",
     "prefer-stable": true

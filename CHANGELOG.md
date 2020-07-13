@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.2.1] - 2020-07-13
+
+### Fixed
+
+- Fixed zombie dependency
+
 ## [3.2.0] - 2020-07-13
 
 ### Changed
