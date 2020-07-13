@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.1.0] - 2020-07-xx
+
+### Added 
+
+- Added Fixture generator
+
 ## [3.0.1] - 2020-07-09
 
 ### Fixed

@@ -47,6 +47,7 @@ class GenerateCommand extends Command
         'controller' => 'Generates a Controller class',
         'entity' => 'Generates an Entity class',
         'exception' => 'Generates an Exception class',
+        'fixture' => 'Generates a Fixture class',
         'helper' => 'Generates a Helper class',
         'job' => 'Generates a Job class',
         'listener' => 'Generates a Listener class',
@@ -297,6 +298,18 @@ class GenerateCommand extends Command
             $data
         );
     }
+    
+    protected function fixture(array $data)
+    {
+        $baseFolder = dirname($this->getBaseFolder($data['name'], self::TEST));
+
+        $this->generate(
+            $this->getTemplateFilename('fixture'),
+            $baseFolder . "/Fixture/{$data['class']}Fixture.php",
+            $data
+        );
+    }
+
     protected function helper(array $data)
     {
         $this->generate(

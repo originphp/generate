@@ -160,6 +160,18 @@ class GenerateCommandTest extends OriginTestCase
         unlink($filename);
     }
 
+    public function testGenerateFixture()
+    {
+        $this->exec('generate --force fixture Dummy');
+        $this->assertExitSuccess();
+
+        $filename = TESTS . DS . 'Fixture' . DS . 'DummyFixture.php';
+        $this->assertOutputContains('Fixture/DummyFixture.php');
+        $this->assertFileExists($filename);
+        $this->assertFileHash('df0d25881eee0c6cefb48b1b782890dc', $filename);
+        unlink($filename);
+    }
+
     public function testGenerateConcernController()
     {
         $this->exec('generate --force concern_controller Dummy');
