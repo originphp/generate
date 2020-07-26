@@ -9,6 +9,6 @@ class %class%ServiceTest extends OriginTestCase
      public function testExecute()
     {
         $result = (new %class%Service())->dispatch();
-        $this->assertTrue($result->success); 
+        $this->assertTrue($result->success()); 
     }
 }

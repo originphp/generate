@@ -43,22 +43,4 @@ class %class%Job extends ApplicationJob
     protected function execute() : void
     {
     }
-
-    /**
-    * This callback is triggered when an error occurs
-    *
-    * @param \Exception $exception
-    * @return void
-    */
-    protected function onError(\Exception $exception) : void
-    {
-    }
-
-    /**
-    * Place the job logic here and define the arguments
-    * e.g. function execute(User $User,$records);
-    */
-    protected function onSuccess() : void
-    {
-    }   
 }

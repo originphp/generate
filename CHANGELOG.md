@@ -1,5 +1,14 @@
 # Changelog
 
+
+## [3.2.2] - 2020-07-26
+
+### Fixed
+
+- Fixed Job template, removed old callbacks
+- Fixed Service template, changed to use new success method
+- Fixed missing confirm on post link in scaffold view template
+
 ## [3.2.1] - 2020-07-13
 
 ### Fixed
