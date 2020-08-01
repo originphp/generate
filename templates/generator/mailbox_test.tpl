@@ -1,5 +1,5 @@
 <?php
-namespace %namespace%\Test\Mailbox;
+namespace %namespace%\Test\TestCase\Mailbox;
 
 use %namespace%\Mailbox\%class%Mailbox;
 use Origin\Mailbox\Mailbox;

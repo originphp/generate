@@ -1,5 +1,5 @@
 <?php
-namespace %namespace%\Test\Http\Controller\Component;
+namespace %namespace%\Test\TestCase\Http\Controller\Component;
 
 use Origin\TestSuite\OriginTestCase;
 use Origin\Http\Controller\Controller;

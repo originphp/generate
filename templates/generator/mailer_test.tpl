@@ -1,5 +1,5 @@
 <?php
-namespace %namespace%\Test\Mailer;
+namespace %namespace%\Test\TestCase\Mailer;
 
 use Origin\TestSuite\OriginTestCase;
 use %namespace%\Mailer\%class%Mailer;

@@ -1,5 +1,5 @@
 <?php
-namespace %namespace%\Test\Job;
+namespace %namespace%\Test\TestCase\Job;
 
 use Origin\TestSuite\OriginTestCase;
 use %namespace%\Job\%class%Job;

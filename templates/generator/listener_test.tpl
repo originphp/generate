@@ -1,5 +1,5 @@
 <?php
-namespace %namespace%\Test\Listener;
+namespace %namespace%\Test\TestCase\Listener;
 
 use Origin\TestSuite\OriginTestCase;
 use %namespace%\Listener\%class%Listener;

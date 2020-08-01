@@ -1,5 +1,5 @@
 <?php
-namespace %namespace%\Test\Http\Middleware;
+namespace %namespace%\Test\TestCase\Http\Middleware;
 
 use Origin\TestSuite\OriginTestCase;
 use Origin\Http\Request;

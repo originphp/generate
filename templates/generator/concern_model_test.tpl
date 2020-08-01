@@ -1,5 +1,5 @@
 <?php
-namespace %namespace%\Test\Model\Concern;
+namespace %namespace%\Test\TestCase\Model\Concern;
 
 use Origin\TestSuite\OriginTestCase;
 use %namespace%\Model\Concern\%class%;

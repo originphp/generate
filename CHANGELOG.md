@@ -1,5 +1,15 @@
 # Changelog
 
+## [3.3.0] - 2020-08-01
+
+### Added
+
+- Added Record generator
+- Added Form generator
+
+### Fixed
+
+- Fixed test namespaces
 
 ## [3.2.2] - 2020-07-26
 

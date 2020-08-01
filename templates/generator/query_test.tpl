@@ -1,5 +1,5 @@
 <?php
-namespace %namespace%\Test\Model\Query;
+namespace %namespace%\Test\TestCase\Model\Query;
 
 use Origin\TestSuite\OriginTestCase;
 use %namespace%\Model\Query\%class%Query;
