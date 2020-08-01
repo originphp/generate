@@ -48,6 +48,7 @@ class GenerateCommand extends Command
         'entity' => 'Generates an Entity class',
         'exception' => 'Generates an Exception class',
         'fixture' => 'Generates a Fixture class',
+        'form' => 'Generates a Form class (tableless model)',
         'helper' => 'Generates a Helper class',
         'job' => 'Generates a Job class',
         'listener' => 'Generates a Listener class',
@@ -58,12 +59,13 @@ class GenerateCommand extends Command
         'migration' => 'Generates a Migration class',
         'plugin' => 'Generates a Plugin skeleton',
         'query' => 'Generates a Query Object class',
+        'record' => 'Generates a Record class (tableless model)',
         'repository' => 'Generates a Repository for a Model',
         'scaffold' => 'Generates a MVC using the database',
         'service' => 'Generates a Service Object class',
     ];
 
-    public function initialize() : void
+    public function initialize(): void
     {
         /**
          * in standalone plugin this directories are the same
@@ -103,7 +105,7 @@ class GenerateCommand extends Command
         ]);
     }
 
-    public function execute() : void
+    public function execute(): void
     {
         $generator = $this->arguments('generator');
         $name = $this->arguments('name');
@@ -310,6 +312,21 @@ class GenerateCommand extends Command
         );
     }
 
+    protected function form(array $data)
+    {
+        $this->generate(
+            $this->getTemplateFilename('form'),
+            $this->getBaseFolder($data['name'], self::SRC).DS.'Form'.DS."{$data['class']}Form.php",
+            $data
+        );
+
+        $this->generate(
+            $this->getTemplateFilename('form_test'),
+            $this->getBaseFolder($data['name'], self::TEST).DS.'Form'.DS."{$data['class']}FormTest.php",
+            $data
+        );
+    }
+
     protected function helper(array $data)
     {
         $this->generate(
@@ -395,6 +412,21 @@ class GenerateCommand extends Command
         );
     }
 
+    protected function record(array $data)
+    {
+        $this->generate(
+            $this->getTemplateFilename('record'),
+            $this->getBaseFolder($data['name'], self::SRC).DS.'Model'.DS."{$data['class']}.php",
+            $data
+        );
+
+        $this->generate(
+            $this->getTemplateFilename('record_test'),
+            $this->getBaseFolder($data['name'], self::TEST).DS.'Model'.DS."{$data['class']}Test.php",
+            $data
+        );
+    }
+
     protected function service(array $data)
     {
         $this->generate(
@@ -458,7 +490,7 @@ class GenerateCommand extends Command
      * @param array $data
      * @return string
      */
-    protected function varExport(array $data) : string
+    protected function varExport(array $data): string
     {
         $data = var_export($data, true);
         $data = str_replace(
@@ -860,7 +892,7 @@ class Scaffold
      *
      * @return array
      */
-    public function validationRules() : array
+    public function validationRules(): array
     {
         $validationRules = [];
         foreach ($this->schema as $model => $schema) {
@@ -896,7 +928,7 @@ class Scaffold
      *
      * @return void
      */
-    public function build() :void
+    public function build(): void
     {
         $models = array_keys($this->schema);
        
@@ -959,7 +991,7 @@ class Scaffold
      * @param array $associations
      * @return array
      */
-    public function findBelongsTo(string $model, array $associations = []) : array
+    public function findBelongsTo(string $model, array $associations = []): array
     {
         $fields = $this->schema[$model]['columns'];
         $primaryKey = (array) $this->primaryKey($model);
@@ -979,7 +1011,7 @@ class Scaffold
      * @param array $associations
      * @return array
      */
-    public function findHasMany(string $model, array $associations = []) : array
+    public function findHasMany(string $model, array $associations = []): array
     {
         $models = array_keys($this->schema);
         foreach ($models as $otherModel) {
@@ -1004,7 +1036,7 @@ class Scaffold
      * @param array $associations
      * @return array
      */
-    public function findHasAndBelongsToMany(string $model, array $associations = []) : array
+    public function findHasAndBelongsToMany(string $model, array $associations = []): array
     {
         $models = array_keys($this->schema);
         foreach ($models as $otherModel) {
