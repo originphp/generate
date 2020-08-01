@@ -477,9 +477,12 @@ class GenerateCommand extends Command
         $data += ['code' => ''];
 
         $version = date('YmdHis');
+
+        $folder = substr($this->getBaseFolder($data['name'], self::SRC), 0, -3) . 'database/migrations/';
+        
         $this->generate(
             $this->getTemplateFilename('migration'),
-            DATABASE . DS . 'migrations' . DS . "{$version}{$data['class']}.php",
+            $folder . "{$version}{$data['class']}.php",
             $data
         );
     }
@@ -758,7 +761,7 @@ class GenerateCommand extends Command
         return $this->directory.DS.'generator'.DS.$name.'.tpl';
     }
 
-    protected function getBaseFolder(string $class, $src = true)
+    protected function getBaseFolder(string $class, int $src = 1)
     {
         list($plugin, $name) = pluginsplit($class);
         if ($plugin) {

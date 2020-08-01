@@ -4,6 +4,7 @@
 
 ### Added
 
+- Added Migrations generate work with plugins
 - Added Record generator
 - Added Form generator
 
