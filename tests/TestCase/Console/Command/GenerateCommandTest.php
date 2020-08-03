@@ -572,7 +572,7 @@ class GenerateCommandTest extends OriginTestCase
 
         $filename = PLUGINS . DS . 'dummy' . DS . 'composer.json';
         $this->assertFileExists($filename);
-        $this->assertFileHash('16bab5bd917ae19aa28358a6147c9475', $filename);
+        $this->assertFileHash('5efb8dd1e0de11ce659e00bdf657b462', $filename);
 
         $this->recursiveDelete(PLUGINS . DS . 'dummy');
     }
