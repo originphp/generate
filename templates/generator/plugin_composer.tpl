@@ -4,10 +4,10 @@
     "type": "origin-plugin",
     "license": "MIT",
     "require": {
-        "originphp/framework": "^2.0"
+        "originphp/framework": "^3.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^8"
+        "phpunit/phpunit": "^9.2"
     },
     "autoload": {
         "psr-4": {
