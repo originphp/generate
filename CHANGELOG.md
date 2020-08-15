@@ -1,9 +1,10 @@
 # Changelog
 
-## [3.3.0] - 2020-08-02
+## [3.3.0] - 2020-08-15
 
 ### Added
 
+- Added docblock `@method` for showing execute params for `Service`, `Job` and `Mailer`
 - Added Migrations generate work with plugins
 - Added Record generator
 - Added Form generator

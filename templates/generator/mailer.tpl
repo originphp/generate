@@ -5,6 +5,9 @@ use App\Mailer\ApplicationMailer;
 use Origin\Core\Config;
 use Origin\Model\Entity;
 
+/**
+ * @method Message dispatch(Entity $user)
+ */
 class %class%Mailer extends ApplicationMailer
 {
     protected function execute(Entity $user) : void

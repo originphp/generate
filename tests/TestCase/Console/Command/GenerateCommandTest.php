@@ -403,8 +403,9 @@ class GenerateCommandTest extends OriginTestCase
         $filename = APP . DS . 'Mailer' . DS . 'DummyMailer.php';
         $this->assertOutputContains('src/Mailer/DummyMailer.php');
         $this->assertFileExists($filename);
-
-        $this->assertFileHash('f9a3b65f5a1e6fae46b71fbe56e82f63', $filename);
+       
+      
+        $this->assertFileHash('6b7911564edac1a54a39d6a9e5e816f3', $filename);
         unlink($filename);
 
         $filename = TESTS . DS . 'TestCase' . DS . 'Mailer' . DS . 'DummyMailerTest.php';
@@ -486,7 +487,7 @@ class GenerateCommandTest extends OriginTestCase
         $this->assertOutputContains('src/Job/DummyJob.php');
         $this->assertFileExists($filename);
      
-        $this->assertFileHash('6ecc0febf6fa14e7301b8ebbe5131d34', $filename);
+        $this->assertFileHash('566fa75e0176da739acd21fc60f2b7ef', $filename);
         unlink($filename);
 
         $filename = TESTS . DS . 'TestCase' . DS . 'Job' . DS . 'DummyJobTest.php';
@@ -504,8 +505,8 @@ class GenerateCommandTest extends OriginTestCase
         $filename = APP . DS . 'Service' . DS . 'DummyService.php';
         $this->assertOutputContains('src/Service/DummyService.php');
         $this->assertFileExists($filename);
-
-        $this->assertFileHash('6ebfbadff3bd94ddfc1df92c90fbe86e', $filename);
+      
+        $this->assertFileHash('246cb486114e1ec1c1d35e68d4092d65', $filename);
         unlink($filename);
 
         $filename = TESTS . DS . 'TestCase' . DS . 'Service' . DS . 'DummyServiceTest.php';

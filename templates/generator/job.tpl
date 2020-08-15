@@ -2,6 +2,9 @@
 namespace %namespace%\Job;
 use App\Job\ApplicationJob;
 
+/**
+ * @method bool dispatch()
+ */
 class %class%Job extends ApplicationJob
 {
     /**
