@@ -569,11 +569,15 @@ class GenerateCommandTest extends OriginTestCase
 
         $filename = PLUGINS . DS . 'dummy' . DS . 'phpunit.xml';
         $this->assertFileExists($filename);
-        $this->assertFileHash('547d46441f0876bac9d21742def30bc4', $filename);
+        $this->assertFileHash('6682a8306b3fb59117088aedf618b808', $filename);
 
         $filename = PLUGINS . DS . 'dummy' . DS . 'composer.json';
         $this->assertFileExists($filename);
         $this->assertFileHash('5efb8dd1e0de11ce659e00bdf657b462', $filename);
+
+        $filename = PLUGINS . DS . 'dummy' . DS . 'tests/bootstrap.php';
+        $this->assertFileExists($filename);
+        $this->assertFileHash('a6cdc8b185d91fd6b6ac25058e4c4508', $filename);
 
         $this->recursiveDelete(PLUGINS . DS . 'dummy');
     }

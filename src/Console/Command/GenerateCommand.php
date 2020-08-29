@@ -613,6 +613,12 @@ class GenerateCommand extends Command
             PLUGINS.DS.Inflector::underscored($data['class']).DS.'composer.json',
             $data
         );
+
+        $this->generate(
+            $this->getTemplateFilename('plugin_test_bootstrap'),
+            PLUGINS.DS.Inflector::underscored($data['class']) . DS . 'tests' . DS . 'bootstrap.php',
+            $data
+        );
     }
     /*
     %model% e.g. BookmarksTag

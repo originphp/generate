@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.3.1] - 2020-08-29
+
+### Changed
+
+- Changed plugin generator to use tests/bootstrap.php
+
 ## [3.3.0] - 2020-08-15
 
 ### Added
