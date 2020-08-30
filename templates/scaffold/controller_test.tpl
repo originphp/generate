@@ -1,12 +1,12 @@
 <?php
-namespace App\Test\Http\Controller;
+namespace %namespace%\Test\Http\Controller;
 
 use Origin\TestSuite\OriginTestCase;
 use Origin\TestSuite\IntegrationTestTrait;
 use Origin\Model\ModelRegistry;
 
 /**
- * @property \App\Model\%model% $%model%
+ * @property \%namespace%\Model\%model% $%model%
  */
 class %controller%ControllerTest extends OriginTestCase
 {

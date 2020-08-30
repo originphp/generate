@@ -1,5 +1,5 @@
 <?php
-namespace App\Model;
+namespace %namespace%\Model;
 
 use Origin\Model\Collection;
 use Origin\Model\Entity;

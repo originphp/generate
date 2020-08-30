@@ -1,8 +1,8 @@
 <?php
-namespace App\Http\Controller;
+namespace %namespace%\Http\Controller;
 
 /**
- * @property \App\Model\%model% $%model%
+ * @property \%namespace%\Model\%model% $%model%
  */
 class %controller%Controller extends ApplicationController
 {
