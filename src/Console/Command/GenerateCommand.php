@@ -646,6 +646,8 @@ class GenerateCommand extends Command
         }
         # Prepare Data
         $vars = $meta['vars'][$model];
+        $vars['namespace'] = $data['namespace'];
+        
         $belongsTo = $meta['associations'][$model]['belongsTo'];
         $hasMany = $meta['associations'][$model]['hasMany'];
         $hasAndBelongsToMany = $meta['associations'][$model]['hasAndBelongsToMany'];
