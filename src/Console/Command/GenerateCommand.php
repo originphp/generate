@@ -157,7 +157,7 @@ class GenerateCommand extends Command
     {
         $this->generate(
             $this->getTemplateFilename('exception'),
-            $this->getBaseFolder($data['name'], self::SRC).DS.'Exception'.DS."{$data['class']}Exception.php",
+            $this->getBaseFolder($data['name'], self::SRC). DS .'Exception'. DS ."{$data['class']}Exception.php",
             $data
         );
     }
@@ -166,13 +166,13 @@ class GenerateCommand extends Command
     {
         $this->generate(
             $this->getTemplateFilename('query'),
-            $this->getBaseFolder($data['name'], self::SRC).DS.'Model'.DS.'Query'.DS."{$data['class']}Query.php",
+            $this->getBaseFolder($data['name'], self::SRC). DS .'Model' . DS . 'Query'. DS ."{$data['class']}Query.php",
             $data
         );
 
         $this->generate(
             $this->getTemplateFilename('query_test'),
-            $this->getBaseFolder($data['name'], self::TEST).DS.'Model'.DS.'Query'.DS."{$data['class']}QueryTest.php",
+            $this->getBaseFolder($data['name'], self::TEST). DS .'Model' . DS . 'Query'. DS ."{$data['class']}QueryTest.php",
             $data
         );
     }
@@ -181,13 +181,13 @@ class GenerateCommand extends Command
     {
         $this->generate(
             $this->getTemplateFilename('entity'),
-            $this->getBaseFolder($data['name'], self::SRC).DS.'Model'.DS.'Entity'.DS."{$data['class']}.php",
+            $this->getBaseFolder($data['name'], self::SRC). DS .'Model' . DS . 'Entity'. DS ."{$data['class']}.php",
             $data
         );
 
         $this->generate(
             $this->getTemplateFilename('entity_test'),
-            $this->getBaseFolder($data['name'], self::TEST).DS.'Model'.DS.'Entity'.DS."{$data['class']}Test.php",
+            $this->getBaseFolder($data['name'], self::TEST). DS .'Model' . DS . 'Entity'. DS ."{$data['class']}Test.php",
             $data
         );
     }
@@ -198,13 +198,13 @@ class GenerateCommand extends Command
     
         $this->generate(
             $this->getTemplateFilename('command'),
-            $this->getBaseFolder($data['name'], self::SRC).DS.'Console'.DS.'Command'.DS."{$data['class']}Command.php",
+            $this->getBaseFolder($data['name'], self::SRC). DS .'Console' . DS . 'Command'. DS ."{$data['class']}Command.php",
             $data
         );
 
         $this->generate(
             $this->getTemplateFilename('command_test'),
-            $this->getBaseFolder($data['name'], self::TEST).DS.'Console'.DS.'Command'.DS."{$data['class']}CommandTest.php",
+            $this->getBaseFolder($data['name'], self::TEST). DS .'Console' . DS . 'Command'. DS ."{$data['class']}CommandTest.php",
             $data
         );
     }
@@ -234,7 +234,7 @@ class GenerateCommand extends Command
         $data['methods'] = $controllerMethods;
         $this->generate(
             $this->getTemplateFilename('controller'),
-            $this->getBaseFolder($data['name'], self::SRC).DS.'Http'.DS.'Controller'.DS."{$data['class']}Controller.php",
+            $this->getBaseFolder($data['name'], self::SRC). DS .'Http' . DS . 'Controller'. DS ."{$data['class']}Controller.php",
             $data
         );
 
@@ -242,7 +242,7 @@ class GenerateCommand extends Command
             foreach ($params as $method) {
                 $this->generate(
                     $this->getTemplateFilename('view'),
-                    $this->getBaseFolder($data['name'], self::SRC).DS.'Http'.DS.'View'.DS.$data['class'] .DS. "{$method}.ctp",
+                    $this->getBaseFolder($data['name'], self::SRC). DS .'Http' . DS . 'View'. DS .$data['class'] . DS . "{$method}.ctp",
                     ['action' => Inflector::human($method)] + $data
                 );
             }
@@ -251,7 +251,7 @@ class GenerateCommand extends Command
         $data['methods'] = $testMethods;
         $this->generate(
             $this->getTemplateFilename('controller_test'),
-            $this->getBaseFolder($data['name'], self::TEST).DS.'Http'.DS.'Controller'.DS."{$data['class']}ControllerTest.php",
+            $this->getBaseFolder($data['name'], self::TEST). DS .'Http' . DS . 'Controller'. DS ."{$data['class']}ControllerTest.php",
             $data
         );
     }
@@ -260,13 +260,13 @@ class GenerateCommand extends Command
     {
         $this->generate(
             $this->getTemplateFilename('concern_controller'),
-            $this->getBaseFolder($data['name'], self::SRC).DS.'Http'.DS.'Controller'.DS.'Concern'.DS."{$data['class']}.php",
+            $this->getBaseFolder($data['name'], self::SRC). DS .'Http' . DS . 'Controller' . DS . 'Concern'. DS ."{$data['class']}.php",
             $data
         );
 
         $this->generate(
             $this->getTemplateFilename('concern_controller_test'),
-            $this->getBaseFolder($data['name'], self::TEST).DS.'Http'.DS.'Controller'.DS.'Concern'.DS."{$data['class']}Test.php",
+            $this->getBaseFolder($data['name'], self::TEST). DS .'Http' . DS . 'Controller' . DS . 'Concern'. DS ."{$data['class']}Test.php",
             $data
         );
     }
@@ -275,13 +275,13 @@ class GenerateCommand extends Command
     {
         $this->generate(
             $this->getTemplateFilename('concern_model'),
-            $this->getBaseFolder($data['name'], self::SRC).DS.'Model'.DS.'Concern'.DS."{$data['class']}.php",
+            $this->getBaseFolder($data['name'], self::SRC). DS .'Model' . DS . 'Concern'. DS ."{$data['class']}.php",
             $data
         );
 
         $this->generate(
             $this->getTemplateFilename('concern_model_test'),
-            $this->getBaseFolder($data['name'], self::TEST).DS.'Model'.DS.'Concern'.DS."{$data['class']}Test.php",
+            $this->getBaseFolder($data['name'], self::TEST). DS .'Model' . DS . 'Concern'. DS ."{$data['class']}Test.php",
             $data
         );
     }
@@ -290,13 +290,13 @@ class GenerateCommand extends Command
     {
         $this->generate(
             $this->getTemplateFilename('component'),
-            $this->getBaseFolder($data['name'], self::SRC).DS.'Http'.DS.'Controller'.DS.'Component'.DS."{$data['class']}Component.php",
+            $this->getBaseFolder($data['name'], self::SRC). DS .'Http' . DS . 'Controller' . DS . 'Component'. DS ."{$data['class']}Component.php",
             $data
         );
 
         $this->generate(
             $this->getTemplateFilename('component_test'),
-            $this->getBaseFolder($data['name'], self::TEST).DS.'Http'.DS.'Controller'.DS.'Component'.DS."{$data['class']}ComponentTest.php",
+            $this->getBaseFolder($data['name'], self::TEST). DS .'Http' . DS . 'Controller' . DS . 'Component'. DS ."{$data['class']}ComponentTest.php",
             $data
         );
     }
@@ -316,13 +316,13 @@ class GenerateCommand extends Command
     {
         $this->generate(
             $this->getTemplateFilename('form'),
-            $this->getBaseFolder($data['name'], self::SRC).DS.'Form'.DS."{$data['class']}Form.php",
+            $this->getBaseFolder($data['name'], self::SRC). DS .'Form'. DS ."{$data['class']}Form.php",
             $data
         );
 
         $this->generate(
             $this->getTemplateFilename('form_test'),
-            $this->getBaseFolder($data['name'], self::TEST).DS.'Form'.DS."{$data['class']}FormTest.php",
+            $this->getBaseFolder($data['name'], self::TEST). DS .'Form'. DS ."{$data['class']}FormTest.php",
             $data
         );
     }
@@ -331,13 +331,13 @@ class GenerateCommand extends Command
     {
         $this->generate(
             $this->getTemplateFilename('helper'),
-            $this->getBaseFolder($data['name'], self::SRC).DS.'Http'.DS.'View'.DS.'Helper'.DS."{$data['class']}Helper.php",
+            $this->getBaseFolder($data['name'], self::SRC). DS .'Http' . DS . 'View' . DS . 'Helper'. DS ."{$data['class']}Helper.php",
             $data
         );
 
         $this->generate(
             $this->getTemplateFilename('helper_test'),
-            $this->getBaseFolder($data['name'], self::TEST).DS.'Http'.DS.'View'.DS.'Helper'.DS."{$data['class']}HelperTest.php",
+            $this->getBaseFolder($data['name'], self::TEST). DS .'Http' . DS . 'View' . DS . 'Helper'. DS ."{$data['class']}HelperTest.php",
             $data
         );
     }
@@ -346,13 +346,13 @@ class GenerateCommand extends Command
     {
         $this->generate(
             $this->getTemplateFilename('mailbox'),
-            $this->getBaseFolder($data['name'], self::SRC).DS.'Mailbox'.DS."{$data['class']}Mailbox.php",
+            $this->getBaseFolder($data['name'], self::SRC). DS .'Mailbox'. DS ."{$data['class']}Mailbox.php",
             $data
         );
 
         $this->generate(
             $this->getTemplateFilename('mailbox_test'),
-            $this->getBaseFolder($data['name'], self::TEST).DS.'Mailbox'.DS."{$data['class']}MailboxTest.php",
+            $this->getBaseFolder($data['name'], self::TEST). DS .'Mailbox'. DS ."{$data['class']}MailboxTest.php",
             $data
         );
     }
@@ -361,22 +361,22 @@ class GenerateCommand extends Command
     {
         $this->generate(
             $this->getTemplateFilename('mailer'),
-            $this->getBaseFolder($data['name'], self::SRC).DS.'Mailer'.DS."{$data['class']}Mailer.php",
+            $this->getBaseFolder($data['name'], self::SRC). DS .'Mailer'. DS ."{$data['class']}Mailer.php",
             $data
         );
 
         $this->generate(
             $this->getTemplateFilename('mailer_test'),
-            $this->getBaseFolder($data['name'], self::TEST).DS.'Mailer'.DS."{$data['class']}MailerTest.php",
+            $this->getBaseFolder($data['name'], self::TEST). DS .'Mailer'. DS ."{$data['class']}MailerTest.php",
             $data
         );
  
         $input = $this->getTemplateFilename('mailer_html');
-        $out = $this->getBaseFolder($data['name'], self::SRC).DS.'Mailer'.DS.'Template'.DS. $data['underscored'] . '.html.ctp';
+        $out = $this->getBaseFolder($data['name'], self::SRC). DS .'Mailer' . DS . 'Template'. DS . $data['underscored'] . '.html.ctp';
         $this->saveGeneratedCode($out, file_get_contents($input));
 
         $input = $this->getTemplateFilename('mailer_text');
-        $out = $this->getBaseFolder($data['name'], self::SRC).DS.'Mailer'.DS.'Template'.DS. $data['underscored'] . '.text.ctp';
+        $out = $this->getBaseFolder($data['name'], self::SRC). DS .'Mailer' . DS . 'Template'. DS . $data['underscored'] . '.text.ctp';
         $this->saveGeneratedCode($out, file_get_contents($input));
     }
 
@@ -384,13 +384,13 @@ class GenerateCommand extends Command
     {
         $this->generate(
             $this->getTemplateFilename('job'),
-            $this->getBaseFolder($data['name'], self::SRC).DS.'Job'.DS."{$data['class']}Job.php",
+            $this->getBaseFolder($data['name'], self::SRC). DS .'Job'. DS ."{$data['class']}Job.php",
             $data
         );
 
         $this->generate(
             $this->getTemplateFilename('job_test'),
-            $this->getBaseFolder($data['name'], self::TEST).DS.'Job'.DS."{$data['class']}JobTest.php",
+            $this->getBaseFolder($data['name'], self::TEST). DS .'Job'. DS ."{$data['class']}JobTest.php",
             $data
         );
     }
@@ -401,13 +401,13 @@ class GenerateCommand extends Command
         
         $this->generate(
             $this->getTemplateFilename('repository'),
-            $this->getBaseFolder($data['name'], self::SRC).DS . 'Model' . DS. 'Repository'.DS."{$data['class']}Repository.php",
+            $this->getBaseFolder($data['name'], self::SRC).DS . 'Model' . DS. 'Repository'. DS ."{$data['class']}Repository.php",
             $data
         );
 
         $this->generate(
             $this->getTemplateFilename('repository_test'),
-            $this->getBaseFolder($data['name'], self::TEST).DS . 'Model' . DS. 'Repository'.DS."{$data['class']}RepositoryTest.php",
+            $this->getBaseFolder($data['name'], self::TEST).DS . 'Model' . DS. 'Repository'. DS ."{$data['class']}RepositoryTest.php",
             $data
         );
     }
@@ -416,13 +416,13 @@ class GenerateCommand extends Command
     {
         $this->generate(
             $this->getTemplateFilename('record'),
-            $this->getBaseFolder($data['name'], self::SRC).DS.'Model'.DS."{$data['class']}.php",
+            $this->getBaseFolder($data['name'], self::SRC). DS .'Model'. DS ."{$data['class']}.php",
             $data
         );
 
         $this->generate(
             $this->getTemplateFilename('record_test'),
-            $this->getBaseFolder($data['name'], self::TEST).DS.'Model'.DS."{$data['class']}Test.php",
+            $this->getBaseFolder($data['name'], self::TEST). DS .'Model'. DS ."{$data['class']}Test.php",
             $data
         );
     }
@@ -431,13 +431,13 @@ class GenerateCommand extends Command
     {
         $this->generate(
             $this->getTemplateFilename('service'),
-            $this->getBaseFolder($data['name'], self::SRC).DS.'Service'.DS."{$data['class']}Service.php",
+            $this->getBaseFolder($data['name'], self::SRC). DS .'Service'. DS ."{$data['class']}Service.php",
             $data
         );
 
         $this->generate(
             $this->getTemplateFilename('service_test'),
-            $this->getBaseFolder($data['name'], self::TEST).DS.'Service'.DS."{$data['class']}ServiceTest.php",
+            $this->getBaseFolder($data['name'], self::TEST). DS .'Service'. DS ."{$data['class']}ServiceTest.php",
             $data
         );
     }
@@ -446,13 +446,13 @@ class GenerateCommand extends Command
     {
         $this->generate(
             $this->getTemplateFilename('listener'),
-            $this->getBaseFolder($data['name'], self::SRC).DS.'Listener'.DS."{$data['class']}Listener.php",
+            $this->getBaseFolder($data['name'], self::SRC). DS .'Listener'. DS ."{$data['class']}Listener.php",
             $data
         );
 
         $this->generate(
             $this->getTemplateFilename('listener_test'),
-            $this->getBaseFolder($data['name'], self::TEST).DS.'Listener'.DS."{$data['class']}ListenerTest.php",
+            $this->getBaseFolder($data['name'], self::TEST). DS .'Listener'. DS ."{$data['class']}ListenerTest.php",
             $data
         );
     }
@@ -461,13 +461,13 @@ class GenerateCommand extends Command
     {
         $this->generate(
             $this->getTemplateFilename('middleware'),
-            $this->getBaseFolder($data['name'], self::SRC).DS.'Http'.DS.'Middleware'.DS."{$data['class']}Middleware.php",
+            $this->getBaseFolder($data['name'], self::SRC). DS .'Http' . DS . 'Middleware'. DS ."{$data['class']}Middleware.php",
             $data
         );
 
         $this->generate(
             $this->getTemplateFilename('middleware_test'),
-            $this->getBaseFolder($data['name'], self::TEST).DS.'Http'.DS.'Middleware'.DS."{$data['class']}MiddlewareTest.php",
+            $this->getBaseFolder($data['name'], self::TEST). DS .'Http' . DS . 'Middleware'. DS ."{$data['class']}MiddlewareTest.php",
             $data
         );
     }
@@ -524,19 +524,19 @@ class GenerateCommand extends Command
 
         $this->generate(
             $this->getTemplateFilename('model'),
-            $this->getBaseFolder($data['name'], self::SRC).DS.'Model'.DS."{$data['class']}.php",
+            $this->getBaseFolder($data['name'], self::SRC). DS .'Model'. DS ."{$data['class']}.php",
             $data
         );
 
         $this->generate(
             $this->getTemplateFilename('model_test'),
-            $this->getBaseFolder($data['name'], self::TEST).DS.'Model'.DS."{$data['class']}Test.php",
+            $this->getBaseFolder($data['name'], self::TEST). DS .'Model'. DS ."{$data['class']}Test.php",
             $data
         );
         $fixtureFolder = str_replace('TestCase', 'Fixture', $this->getBaseFolder($data['name'], self::TEST));
         $this->generate(
             $this->getTemplateFilename('model_fixture'),
-            $fixtureFolder.DS."{$data['class']}Fixture.php",
+            $fixtureFolder. DS ."{$data['class']}Fixture.php",
             $data
         );
 
@@ -570,53 +570,53 @@ class GenerateCommand extends Command
             'database',
         ];
 
-        $path = PLUGINS .DS.Inflector::underscored($data['class']);
+        $path = PLUGINS . DS .Inflector::underscored($data['class']);
         foreach ($structure as $folder) {
-            $directory = $path.DS.$folder;
+            $directory = $path. DS .$folder;
             if (! file_exists($directory)) {
                 $this->createDirectory($directory);
             }
         }
 
-        $directory = PLUGINS.DS.Inflector::underscored($data['class']).DS.'src';
+        $directory = PLUGINS. DS .Inflector::underscored($data['class']). DS .'src';
 
         $this->generate(
             $this->getTemplateFilename('plugin_controller'),
-            $directory.DS.'Http'.DS.'Controller'.DS."{$data['class']}ApplicationController.php",
+            $directory. DS .'Http' . DS . 'Controller' . DS . 'ApplicationController.php',
             $data
         );
         $this->generate(
             $this->getTemplateFilename('plugin_model'),
-            $directory.DS.'Model'.DS."{$data['class']}ApplicationModel.php",
+            $directory. DS .'Model'. DS .'ApplicationModel.php',
             $data
         );
         $this->generate(
             $this->getTemplateFilename('plugin_routes'),
-            PLUGINS.DS.Inflector::underscored($data['class']).DS.'config'.DS.'routes.php',
+            PLUGINS. DS .Inflector::underscored($data['class']). DS .'config' . DS . 'routes.php',
             $data
         );
 
         $this->generate(
             $this->getTemplateFilename('plugin_bootstrap'),
-            PLUGINS.DS.Inflector::underscored($data['class']).DS.'config'.DS.'bootstrap.php',
+            PLUGINS. DS .Inflector::underscored($data['class']). DS .'config' . DS . 'bootstrap.php',
             $data
         );
 
         $this->generate(
             $this->getTemplateFilename('phpunit'),
-            PLUGINS.DS.Inflector::underscored($data['class']).DS.'phpunit.xml',
+            PLUGINS. DS .Inflector::underscored($data['class']). DS .'phpunit.xml',
             $data
         );
 
         $this->generate(
             $this->getTemplateFilename('plugin_composer'),
-            PLUGINS.DS.Inflector::underscored($data['class']).DS.'composer.json',
+            PLUGINS. DS .Inflector::underscored($data['class']). DS .'composer.json',
             $data
         );
 
         $this->generate(
             $this->getTemplateFilename('plugin_test_bootstrap'),
-            PLUGINS.DS.Inflector::underscored($data['class']) . DS . 'tests' . DS . 'bootstrap.php',
+            PLUGINS. DS .Inflector::underscored($data['class']) . DS . 'tests' . DS . 'bootstrap.php',
             $data
         );
     }
@@ -650,7 +650,7 @@ class GenerateCommand extends Command
         $hasMany = $meta['associations'][$model]['hasMany'];
         $hasAndBelongsToMany = $meta['associations'][$model]['hasAndBelongsToMany'];
         $associated = array_merge($belongsTo, $hasMany, $hasAndBelongsToMany);
-        $templateFolder = $this->directory.DS. 'scaffold';
+        $templateFolder = $this->directory. DS . 'scaffold';
         
         # Build Controller
         $template = file_get_contents($templateFolder . DS . 'controller.tpl');
@@ -677,7 +677,7 @@ class GenerateCommand extends Command
         $template = $this->format($template, $vars);
        
         $controller = Inflector::plural($model);
-        $filename = $this->getBaseFolder($data['name'], self::SRC).DS.'Http'.DS.'Controller'.DS."{$controller}Controller.php";
+        $filename = $this->getBaseFolder($data['name'], self::SRC). DS .'Http' . DS . 'Controller'. DS ."{$controller}Controller.php";
         $this->saveGeneratedCode($filename, $template);
         unset($vars['compact'],$vars['associated']);
        
@@ -709,7 +709,7 @@ class GenerateCommand extends Command
                 $vars['initialize'] .= '       $this->' . "validate('{$field}',{$export});\n";
             }
         }
-        $filename = $this->getBaseFolder($data['name'], self::SRC).DS.'Model'.DS."{$model}.php";
+        $filename = $this->getBaseFolder($data['name'], self::SRC). DS .'Model'. DS ."{$model}.php";
         $template = $this->format($template, $vars);
         $this->saveGeneratedCode($filename, $template);
 
@@ -726,7 +726,7 @@ class GenerateCommand extends Command
             $blocks[] = $block;
         }
       
-        $directory = $this->getBaseFolder($data['name'], self::SRC) . DS .'Http'.DS.'View'.DS. $controller;
+        $directory = $this->getBaseFolder($data['name'], self::SRC) . DS .'Http' . DS . 'View'. DS . $controller;
 
         foreach (['add','edit','index','view'] as $view) {
             // $blocks = $originalBlocks;
@@ -764,7 +764,7 @@ class GenerateCommand extends Command
 
     protected function getTemplateFilename(string $name)
     {
-        return $this->directory.DS.'generator'.DS.$name.'.tpl';
+        return $this->directory. DS .'generator'. DS .$name.'.tpl';
     }
 
     protected function getBaseFolder(string $class, int $src = 1)
@@ -776,17 +776,17 @@ class GenerateCommand extends Command
         // Src
         if ($src === self::SRC) {
             if ($plugin) {
-                return PLUGINS.DS.$plugin.DS.'src';
+                return PLUGINS. DS .$plugin. DS .'src';
             }
 
             return APP;
         }
         // Tests
         if ($plugin) {
-            return PLUGINS.DS.$plugin.DS.'tests'.DS.'TestCase';
+            return PLUGINS. DS .$plugin. DS .'tests' . DS . 'TestCase';
         }
 
-        return TESTS.DS.'TestCase';
+        return TESTS. DS .'TestCase';
     }
 
     /**
