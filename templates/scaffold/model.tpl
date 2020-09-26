@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace %namespace%\Model;
 
 use Origin\Model\Collection;
@@ -8,8 +9,8 @@ use ArrayObject;
 class %model% extends ApplicationModel
 {
     /**
-    * This is called when the model is constructed. 
-    */
+     * This is called when the model is constructed. 
+     */
     protected function initialize(array $config) : void
     {
         parent::initialize($config);

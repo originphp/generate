@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace %namespace%\Test\Http\Controller;
 
 use Origin\TestSuite\OriginTestCase;
