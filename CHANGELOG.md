@@ -1,10 +1,17 @@
 # Changelog
 
-### [3.3.2] - 2020-09-26
+## [3.4.0] - 2020-09-26
 
-Fixed templates added strict type declarations,
-Fixed templates formatting
-Fixed added some mark test as incomplete to prevent tests from being run before developed e.g. console app
+### Added
+
+- Added strict type declarations to templates
+- Added some mark test as incomplete to some tests to prevent tests from being run before developed
+
+### Fixed
+
+- Fixed some template formatting
+- Fixed mailbox template which was generating code for old callback
+- Fixed controller concern template namespace
 
 ## [3.3.1] - 2020-08-29
 
