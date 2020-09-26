@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.3.2] - 2020-09-26
+
+Fixed templates added strict type declarations,
+Fixed templates formatting
+Fixed added some mark test as incomplete to prevent tests from being run before developed e.g. console app
+
 ## [3.3.1] - 2020-08-29
 
 ### Changed
