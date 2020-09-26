@@ -1,5 +1,6 @@
 <?php
-namespace %namespace%\Http\Controller\Concern\%class%;
+declare(strict_types = 1);
+namespace %namespace%\Http\Controller\Concern;
 
 trait %class%
 {
@@ -8,8 +9,7 @@ trait %class%
      *
      * @return void
      */
-    protected function initialize%class%() : void
+    protected function initialize%class%(): void
     {
-
     }
 }

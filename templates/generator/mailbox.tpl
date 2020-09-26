@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace %namespace%\Mailbox;
 
 use Origin\Mailbox\Mailbox;
@@ -11,10 +12,6 @@ class %class%Mailbox extends Mailbox
     }
     
     protected function process(): void
-    {
-    }
-
-    protected function onError(Exception $exception) : void
     {
     }
 }

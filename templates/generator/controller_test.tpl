@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace %namespace%\Test\TestCase\Http\Controller;
 
 use Origin\TestSuite\OriginTestCase;
@@ -13,19 +14,22 @@ class %class%ControllerTest extends OriginTestCase
 
     protected $fixtures = ['%model%'];
 
-    protected function startup() : void
+    protected function startup(): void
     {
         $this->loadModel('%model%');
     }
 
-    public function testIndexExample()
+    protected function testIndexExample(): void
     {
+        $this->markTestIncomplete(
+            'This test has not been implemented yet.'
+        );
         $this->get('/%underscored%/index');
         $this->assertResponseOk();
         $this->assertResponseContains('<h2>%human%</h2>');
     }
 
-    public function testNotFoundExample()
+    protected function testNotFoundExample(): void
     {
         $this->get('/%underscored%/does-not-exist');
         $this->assertResponseNotFound();

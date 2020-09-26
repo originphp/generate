@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace %namespace%\Test\TestCase\Model\Entity;
 
 use Origin\TestSuite\OriginTestCase;
@@ -6,7 +7,7 @@ use %namespace%\Model\Entity\%class%;
 
 class %class%Test extends OriginTestCase
 {
-    public function testSample()
+    protected function testSample(): void
     {
         $data = [];
         $options = [];

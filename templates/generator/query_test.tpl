@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace %namespace%\Test\TestCase\Model\Query;
 
 use Origin\TestSuite\OriginTestCase;

@@ -1,5 +1,7 @@
 <?php
+declare(strict_types = 1);
 namespace %namespace%\Http\Middleware;
+
 use Origin\Http\Request;
 use Origin\Http\Response;
 use Origin\Http\Middleware\Middleware;
@@ -12,9 +14,8 @@ class %class%Middleware extends Middleware
      * @param \Origin\Http\Request $request
      * @return void
      */
-    public function handle(Request $request) : void
+    public function handle(Request $request): void
     {
-
     }
 
     /**
@@ -24,8 +25,7 @@ class %class%Middleware extends Middleware
      * @param \Origin\Http\Response $response
      * @return void
      */
-    public function process(Request $request, Response $response) : void
+    public function process(Request $request, Response $response): void
     {
-
     }
 }

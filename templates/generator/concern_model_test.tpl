@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace %namespace%\Test\TestCase\Model\Concern;
 
 use Origin\TestSuite\OriginTestCase;
@@ -17,7 +18,7 @@ class %class%Test extends OriginTestCase
 {
     protected $fixtures = ['User'];
 
-    protected function startup() : void
+    protected function startup(): void
     {
         $this->loadModel('User', ['className' => User::class]);
     }

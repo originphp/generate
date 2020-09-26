@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace %namespace%\Test\TestCase\Http\Middleware;
 
 use Origin\TestSuite\OriginTestCase;
@@ -18,11 +19,18 @@ class %class%MiddlewareTest extends OriginTestCase
     */
     protected $response = null;
 
-    protected function startup() : void
+    protected function startup(): void
     {
         $this->request = new Request();
         $this->response = new Response();
-    
+    }
+
+    protected function testRun(): void 
+    {
+        $this->markTestIncomplete(
+            'This test has not been implemented yet.'
+        );
+
         // Invoke the middleware
         $middleware = new %class%Middleware();
         $middleware($this->request, $this->response);

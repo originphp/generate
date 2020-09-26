@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace %namespace%\Test\TestCase\Http\View\Helper;
 
 use Origin\TestSuite\OriginTestCase;
@@ -15,9 +16,9 @@ class %class%HelperTest extends OriginTestCase
     */
     protected $%class% = null;
 
-    protected function startup() : void
+    protected function startup(): void
     {
-        $controller = new Controller(new Request(),new Response());
+        $controller = new Controller(new Request(), new Response());
         $view = new View($controller);
         $this->%class% = new %class%Helper($view);
     }

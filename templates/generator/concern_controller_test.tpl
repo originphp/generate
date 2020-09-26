@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace %namespace%\Test\TestCase\Controller\Concern;
 
 use Origin\TestSuite\OriginTestCase;
@@ -15,7 +16,7 @@ class DummyController extends Controller
  */
 class %class%Test extends OriginTestCase
 {
-    public function testConcernMethod()
+    protected function testConcernMethod(): void
     {
         $controller = new DummyController();
         $this->markTestIncomplete(

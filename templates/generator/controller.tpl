@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace %namespace%\Http\Controller;
 
 /**
@@ -6,7 +7,7 @@ namespace %namespace%\Http\Controller;
  */
 class %class%Controller extends ApplicationController
 {
-    protected function initialize() : void
+    protected function initialize(): void
     {
         parent::initialize();
     }
