@@ -11,7 +11,7 @@ class %class%Form extends Record
      *
      * @example
      *
-     *   $this->addField('name', ['type'=>'string','length'=>255);
+     *   $this->addField('name', ['type'=>'string','length'=>255]);
      *   $this->validate('name', 'required');
      *
      * @return void
