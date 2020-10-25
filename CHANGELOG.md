@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.4.2]
+
+### Fixed
+
+- Fixed comment in template
+
 ## [3.4.0] - 2020-09-26
 
 ### Added
