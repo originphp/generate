@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.5.0] - 2021-01-03
+
+### Changed
+
+- Service generator no longer adds suffix to class
+- Service generator class no long extends ApplicationService
+
 ## [3.4.2] - 2020-10-25
 
 ### Fixed
