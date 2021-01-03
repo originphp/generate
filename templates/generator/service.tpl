@@ -2,13 +2,13 @@
 declare(strict_types = 1);
 namespace %namespace%\Service;
 
-use App\Service\ApplicationService;
+use Origin\Service\Service;
 use Origin\Service\Result;
 
 /**
  * @method Result dispatch()
  */
-class %class%Service extends ApplicationService
+class %class% extends Service
 {
 
     protected function initialize() : void
@@ -19,6 +19,6 @@ class %class%Service extends ApplicationService
     {
         return new Result([
             'data' => []
-            ]);
+        ]);
     }
 }

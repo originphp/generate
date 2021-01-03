@@ -502,15 +502,15 @@ class GenerateCommandTest extends OriginTestCase
     {
         $this->exec('generate --force service Dummy');
         $this->assertExitSuccess();
-        $filename = APP . DS . 'Service' . DS . 'DummyService.php';
-        $this->assertOutputContains('src/Service/DummyService.php');
+        $filename = APP . DS . 'Service' . DS . 'Dummy.php';
+        $this->assertOutputContains('src/Service/Dummy.php');
         $this->assertFileExists($filename);
       
         $this->assertFileHash('771085fd1efd035c485a7120d8ada6fa', $filename);
         unlink($filename);
 
-        $filename = TESTS . DS . 'TestCase' . DS . 'Service' . DS . 'DummyServiceTest.php';
-        $this->assertOutputContains('TestCase/Service/DummyServiceTest.php');
+        $filename = TESTS . DS . 'TestCase' . DS . 'Service' . DS . 'DummyTest.php';
+        $this->assertOutputContains('TestCase/Service/DummyTest.php');
         $this->assertFileExists($filename);
         $this->assertFileHash('63aa50f8a549c552a334cc0fcfc7f45f', $filename);
         unlink($filename);

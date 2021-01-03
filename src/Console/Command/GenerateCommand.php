@@ -431,13 +431,13 @@ class GenerateCommand extends Command
     {
         $this->generate(
             $this->getTemplateFilename('service'),
-            $this->getBaseFolder($data['name'], self::SRC). DS .'Service'. DS ."{$data['class']}Service.php",
+            $this->getBaseFolder($data['name'], self::SRC). DS .'Service'. DS ."{$data['class']}.php",
             $data
         );
 
         $this->generate(
             $this->getTemplateFilename('service_test'),
-            $this->getBaseFolder($data['name'], self::TEST). DS .'Service'. DS ."{$data['class']}ServiceTest.php",
+            $this->getBaseFolder($data['name'], self::TEST). DS .'Service'. DS ."{$data['class']}Test.php",
             $data
         );
     }

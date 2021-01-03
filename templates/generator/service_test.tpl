@@ -3,13 +3,13 @@ declare(strict_types = 1);
 namespace %namespace%\Test\TestCase\Service;
 
 use Origin\TestSuite\OriginTestCase;
-use %namespace%\Service\%class%Service;
+use %namespace%\Service\%class%;
 
-class %class%ServiceTest extends OriginTestCase
+class %class%Test extends OriginTestCase
 {
      public function testExecute()
     {
-        $result = (new %class%Service())->dispatch();
+        $result = (new %class%())->dispatch();
         $this->assertTrue($result->success()); 
     }
 }
