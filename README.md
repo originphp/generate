@@ -27,6 +27,8 @@ $ bin/console generate
   controller           Generates a Controller class
   entity               Generates an Entity class
   exception            Generates an Exception class
+  fixture              Generates a Fixture class
+  form                 Generates a Form class (tableless model)
   helper               Generates a Helper class
   job                  Generates a Job class
   listener             Generates a Listener class
@@ -37,17 +39,18 @@ $ bin/console generate
   migration            Generates a Migration class
   plugin               Generates a Plugin skeleton
   query                Generates a Query Object class
+  record               Generates a Record class (tableless model)
   repository           Generates a Repository for a Model
   scaffold             Generates a MVC using the database
   service              Generates a Service Object class
 
 Which generator?
-> 
 
-  ```
+```
 
 
 To generate a class
+
 ```linux
 $ bin/console generate controller Users
 ```
