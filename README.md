@@ -1,7 +1,7 @@
 # Generate
 
 ![license](https://img.shields.io/badge/license-MIT-brightGreen.svg)
-[![build](https://travis-ci.org/originphp/generate.svg?branch=master)](https://travis-ci.org/originphp/generate)
+[![build](https://github.com/originphp/generate/workflows/CI/badge.svg)](https://github.com/originphp/generate/actions)
 [![coverage](https://coveralls.io/repos/github/originphp/generate/badge.svg?branch=master)](https://coveralls.io/github/originphp/generate?branch=master)
 
 This is the code generation plugin for the OriginPHP framework.
