@@ -30,7 +30,8 @@
         "originphp/plugin-installer": "^1.3"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.2"
+        "phpunit/phpunit": "^9.2",
+        "phpstan/phpstan": "^0.12.64"
     },
     "minimum-stability": "dev",
     "prefer-stable": true

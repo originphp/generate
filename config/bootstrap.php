@@ -18,7 +18,7 @@ use Origin\Model\ConnectionManager;
 
 ConnectionManager::config('test', [
     'host' => env('DB_HOST', '127.0.0.1'),
-    'database' => 'generate',
+    'database' => 'originphp',
     'username' => env('DB_USERNAME'),
     'password' => env('DB_PASSWORD'),
     'engine' => env('DB_ENGINE', 'mysql')
