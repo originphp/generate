@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.5.1] - 2021-01-14
+
+### Changed
+
+- Increase max plugin installer version
+
 ## [3.5.0] - 2021-01-03
 
 ### Changed

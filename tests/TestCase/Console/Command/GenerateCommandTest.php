@@ -245,11 +245,18 @@ class GenerateCommandTest extends OriginTestCase
         unlink($filename);
     }
 
+    private function deleteIfExists(string $filename)
+    {
+        if (file_exists($filename)) {
+            unlink($filename);
+        }
+    }
+
     public function testInteractive()
     {
         // this can be annoying when changes are maded
-        @unlink(APP . DS . 'Model' . DS . 'Concern' . DS . 'Fooable.php');
-        @unlink(TESTS . DS . 'TestCase' . DS . 'Model' . DS . 'Concern' . DS . 'FooableTest.php');
+        $this->deleteIfExists(APP . DS . 'Model' . DS . 'Concern' . DS . 'Fooable.php');
+        $this->deleteIfExists(TESTS . DS . 'TestCase' . DS . 'Model' . DS . 'Concern' . DS . 'FooableTest.php');
 
         $this->exec('generate', ['concern_model', 'Fooable']);
         $this->assertExitSuccess();
