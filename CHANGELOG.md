@@ -1,6 +1,10 @@
 # Changelog
 
-## [3.5.1] - 2021-01-14
+## [3.6.0] - 2021-01-14
+
+### Fixed
+
+- Fixed PHP 8.0 issues
 
 ### Changed
 
