@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.7.0] - 2021-02-23
+
+### Added
+
+- Added Task generator
+
 ## [3.6.0] - 2021-01-14
 
 ### Fixed
@@ -77,7 +83,7 @@
 
 ## [3.1.0] - 2020-07-13
 
-### Added 
+### Added
 
 - Added Fixture generator
 
@@ -85,7 +91,7 @@
 
 ### Fixed
 
-- Fixed bootstrap path 
+- Fixed bootstrap path
 - Fixed incorrect db driver in travis settings
 
 ## [3.0.0] - 2020-07-08
@@ -101,25 +107,33 @@
 - skipping this version to bring in line with framework version number
 
 ### Removed
+
 - Removed docblock property tags for components from scaffolding as this is in ApplicationController
 
 ## [1.1.1] - 2020-01-28
-### Fixed 
+
+### Fixed
+
 - Fixed scaffolding templates not echoing variable
 
 ### Changed
+
 - Changed travis.yml - Changed PHP 7.4 version and removed Removed Codecov.io
 
 ## [1.1.0] - 2019-11-28
+
 ### Fixed
+
 - Fixed Migration version numbering to use 24 hour time
 
 ### Added
+
 - Added Mailbox generator
 
 ## [1.0.1] - 2019-11-06
 
 ### Fixed
+
 - concern_controller test generator (namespace)
 - middleware test generator (namespace)
 - model test generator (doc property comment)
