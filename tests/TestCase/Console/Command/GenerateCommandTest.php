@@ -589,6 +589,26 @@ class GenerateCommandTest extends OriginTestCase
         $this->recursiveDelete(PLUGINS . DS . 'dummy');
     }
 
+    public function testGenerateTask()
+    {
+        $this->exec('generate --force task Dummy');
+
+        $this->assertExitSuccess();
+        $filename = APP . DS . 'Task' . DS . 'DummyTask.php';
+        $this->assertOutputContains('src/Task/DummyTask.php');
+        $this->assertFileExists($filename);
+     
+        $this->assertFileHash('d7c26db6ab2efa5134e642cc71455812', $filename);
+        unlink($filename);
+
+        $filename = TESTS . DS . 'TestCase' . DS . 'Task' . DS . 'DummyTaskTest.php';
+
+        $this->assertOutputContains('TestCase/Task/DummyTaskTest.php');
+        $this->assertFileExists($filename);
+        $this->assertFileHash('721d6a783b06f1aae788035566e00f03', $filename);
+        unlink($filename);
+    }
+
     /*
 
         'plugin' => 'Generates a plugin skeleton',
