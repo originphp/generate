@@ -63,6 +63,7 @@ class GenerateCommand extends Command
         'repository' => 'Generates a Repository for a Model',
         'scaffold' => 'Generates a MVC using the database',
         'service' => 'Generates a Service Object class',
+        'task' => 'Generates a Task for Scheduling'
     ];
 
     public function initialize(): void
@@ -408,6 +409,23 @@ class GenerateCommand extends Command
         $this->generate(
             $this->getTemplateFilename('repository_test'),
             $this->getBaseFolder($data['name'], self::TEST).DS . 'Model' . DS. 'Repository'. DS ."{$data['class']}RepositoryTest.php",
+            $data
+        );
+    }
+
+    protected function task(array $data)
+    {
+        $data['custom'] = Inflector::human($data['underscored']);
+
+        $this->generate(
+            $this->getTemplateFilename('task'),
+            $this->getBaseFolder($data['name'], self::SRC). DS .'Task'. DS ."{$data['class']}Task.php",
+            $data
+        );
+
+        $this->generate(
+            $this->getTemplateFilename('task_test'),
+            $this->getBaseFolder($data['name'], self::TEST). DS .'Task'. DS ."{$data['class']}TaskTest.php",
             $data
         );
     }

@@ -1,38 +1,38 @@
 {
-    "name": "originphp/generate",
-    "description": "OriginPHP Generate Plugin. Generates code using boilerplate templates ready for use.",
-    "type": "originphp-plugin",
-    "keywords": [
-        "originphp",
-        "code generation"
-    ],
-    "homepage": "https://www.originphp.com",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Jamiel Sharief",
-            "email": "js@originphp.com"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "Generate\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Generate\\Test\\": "tests/"
-        }
-    },
-    "require": {
-        "php": ">=7.3.0",
-        "originphp/framework": "^3.14",
-        "originphp/plugin-installer": "^1.3|^2.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^9.2",
-        "phpstan/phpstan": "^0.12.64"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+  "name": "originphp/generate",
+  "description": "OriginPHP Generate Plugin. Generates code using boilerplate templates ready for use.",
+  "type": "originphp-plugin",
+  "keywords": [
+    "originphp",
+    "code generation"
+  ],
+  "homepage": "https://www.originphp.com",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jamiel Sharief",
+      "email": "js@originphp.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Generate\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Generate\\Test\\": "tests/"
+    }
+  },
+  "require": {
+    "php": ">=7.3.0",
+    "originphp/framework": "^3.19",
+    "originphp/plugin-installer": "^1.3|^2.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.2",
+    "phpstan/phpstan": "^0.12.64"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
