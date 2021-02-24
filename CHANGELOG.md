@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.7.0] - 2021-02-24
+
+### Fixed
+
+- Fixed task template
+
 ## [3.7.0] - 2021-02-23
 
 ### Added
