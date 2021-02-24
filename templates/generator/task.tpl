@@ -5,7 +5,7 @@ namespace %namespace%\Task;
 use Origin\Schedule\Task;
 use Origin\Schedule\Schedule;
 
-class BackupTask extends Task
+class %class%Task extends Task
 {
     protected $name = '%custom%';
     protected $description = '';
