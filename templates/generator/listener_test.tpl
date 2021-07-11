@@ -7,7 +7,7 @@ use %namespace%\Listener\%class%Listener;
 
 class %class%ListenerTest extends OriginTestCase
 {
-    protected function testCreate(): void
+    public function testCreate(): void
     {
         $this->markTestIncomplete(
             'This test has not been implemented yet.'

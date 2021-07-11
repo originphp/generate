@@ -18,7 +18,7 @@ class %class%MailboxTest extends OriginTestCase
         ]);
     }
 
-    protected function testRouteMatching(): void
+   public function test RouteMatching(): void
     {
         $this->markTestIncomplete(
             'This test has not been implemented yet.'
@@ -28,7 +28,7 @@ class %class%MailboxTest extends OriginTestCase
         $this->assertEquals(%class%Mailbox::class, $mailbox);
     }
 
-    protected function testDelivered(): void
+    public function testDelivered(): void
     {
         $this->markTestIncomplete(
             'This test has not been implemented yet.'

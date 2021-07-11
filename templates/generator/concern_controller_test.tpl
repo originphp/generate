@@ -16,7 +16,7 @@ class DummyController extends Controller
  */
 class %class%Test extends OriginTestCase
 {
-    protected function testConcernMethod(): void
+    public function testConcernMethod(): void
     {
         $controller = new DummyController();
         $this->markTestIncomplete(

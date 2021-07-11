@@ -7,7 +7,7 @@ use %namespace%\Model\Entity\%class%;
 
 class %class%Test extends OriginTestCase
 {
-    protected function testSample(): void
+    public function testSample(): void
     {
         $data = [];
         $options = [];

@@ -19,7 +19,7 @@ class %class%ControllerTest extends OriginTestCase
         $this->loadModel('%model%');
     }
 
-    protected function testIndexExample(): void
+    public function testIndexExample(): void
     {
         $this->markTestIncomplete(
             'This test has not been implemented yet.'
@@ -29,7 +29,7 @@ class %class%ControllerTest extends OriginTestCase
         $this->assertResponseContains('<h2>%human%</h2>');
     }
 
-    protected function testNotFoundExample(): void
+    public function testNotFoundExample(): void
     {
         $this->get('/%underscored%/does-not-exist');
         $this->assertResponseNotFound();

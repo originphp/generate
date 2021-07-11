@@ -25,7 +25,7 @@ class %class%MiddlewareTest extends OriginTestCase
         $this->response = new Response();
     }
 
-    protected function testRun(): void 
+    public function testRun(): void 
     {
         $this->markTestIncomplete(
             'This test has not been implemented yet.'
