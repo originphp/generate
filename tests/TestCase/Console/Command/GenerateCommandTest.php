@@ -110,7 +110,6 @@ class GenerateCommandTest extends OriginTestCase
 
         $this->assertFileHash('0e2366d6811e52834474c99f52208e4c', APP . DS . 'Http' . DS . 'View' . DS . 'Bookmarks' . DS . 'view.ctp');
 
-        print(file_get_contents(APP . DS . 'Http' . DS . 'View' . DS . 'Bookmarks' . DS . 'view.ctp'));
         unlink(APP . DS . 'Http' . DS . 'View' . DS . 'Bookmarks' . DS . 'view.ctp');
     }
 
