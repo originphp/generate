@@ -5,11 +5,9 @@
         </div>
         <h4><?= __('%pluralHuman%') ?></h4>
     </div>
-    
-    <?php if (!empty($%currentModel%->%pluralName%)): ?>
+
     <table class="table">
         <tr>
-           
             <RECORDBLOCK>
             <th><?= __('%field%') ?></th>
             </RECORDBLOCK>
@@ -17,8 +15,7 @@
         </tr>
         <?php foreach ($%currentModel%->%pluralName% as $%singularName%): ?>
         <tr>
-
-             <RECORDBLOCK>
+            <RECORDBLOCK>
             <td><?= h($%singularName%->%field%) ?></td>
             </RECORDBLOCK>
             <td class="actions">
@@ -31,5 +28,4 @@
         </tr>
         <?php endforeach; ?>
     </table>
-    <?php endif; ?>
 </div>

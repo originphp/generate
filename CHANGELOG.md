@@ -1,5 +1,21 @@
 # Changelog
 
+
+## [3.8.0] - 2021-07-11
+
+### Fixed
+
+- Fixed ConcenernControllerTest template switched to public method
+- Fixed ControllerTest template switched to public method
+- Fixed EntityTest template switched to public method
+- Fixed ListenerTest template switched to public method
+- Fixed MailBoxTest template switched to public method
+- Fixed MiddlewareTeest template switched to public method
+
+## Changed
+
+-  Changed template for view related so that it is no longer in an if block
+
 ## [3.7.1] - 2021-02-24
 
 ### Fixed
